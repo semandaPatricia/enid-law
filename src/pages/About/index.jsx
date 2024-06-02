@@ -1,8 +1,9 @@
 import React from 'react'
+import Aboutsection from '../../components/Aboutsection'
 
 const index = () => {
   return (
-    <div>about page</div>
+    <Aboutsection/>
   )
 }
 

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react'
+import { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Navbar = () => {
   // State to manage the navbar's visibility
@@ -12,28 +14,30 @@ const Navbar = () => {
 
   // Array containing navigation items
   const navItems = [
-    { id: 1, text: 'Home' },
-    { id: 2, text: ' Team' },
-    { id: 3, text: 'Services' },
-    { id: 4, text: 'About' },
-    { id: 5, text: 'Contact' },
+    { id: 1, text: 'Home', path: '/' },
+    { id: 2, text: 'Team', path: '/team' },
+    { id: 3, text: 'Services', path: '/services' },
+    { id: 4, text: 'About', path: '/about' },
+    { id: 5, text: 'Contact', path: '/contact' },
   ];
 
   return (
     <div className='bg-black flex justify-between items-center h-24  px-4 text-white'>
       {/* Logo  text-[#00dfba]*/}
-      
+      <a href="/">
+      <div className="flex items-center flex-shrink-0">
       <img src="/logo3.svg" alt="" width={25} />
-      <h1 className='w-full text-md font-semibold ml-2 '>Bukenya,Chemonges & Co.</h1>
-      
+      <span className='w-full text-md font-semibold ml-2 '>Bukenya,Chemonges & Co.</span>
+      </div>
+      </a>
       {/* Desktop Navigation */}
       <ul className='hidden md:flex'>
-        {navItems.map(item => (
+        {navItems.map((item, index) => (
           <li
             key={item.id}
             className='p-4 hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black'
           >
-            {item.text}
+          <a href={item.path}>{item.text}</a>
           </li>
         ))}
       </ul>
@@ -60,7 +64,7 @@ const Navbar = () => {
             key={item.id}
             className='p-4 border-b rounded-xl hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer border-gray-600'
           >
-            {item.text}
+               <a href={item.path}>{item.text}</a>
           </li>
         ))}
       </ul>
@@ -69,4 +73,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 

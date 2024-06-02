@@ -7,7 +7,8 @@ import Contact from "./pages/Contact/index"
 import About from "./pages/About/index"
 
 import './App.css'
-import Navbar from './components/Navbar'
+
+
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
   return (
     < >
     <Router>
-      <Navbar/>
+    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -23,6 +24,9 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      
+      
+      
     </Router>
   </>
   )
