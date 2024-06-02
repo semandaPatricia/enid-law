@@ -5,6 +5,7 @@ import Feature from '../../components/Feature'; // Import Feature
 import Services from '../../components/Services'; // Import Services
 import Blog from '../../components/Blog'; // Import Blog
 import Team from '../../components/Team';
+import Contact from '../../components/Contact';
 const index = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const index = () => {
       <Services />  {/* Add Services component here */}
       <Team/>
       <Blog />  {/* Add Blog component here */}
+      <Contact/>
     </div>
   )
 }
