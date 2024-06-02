@@ -5,6 +5,7 @@ import trial from '../assets/trial.png'
 import judge from '../assets/supreme-court.png'
  import book from '../assets/lawbook.png'
 import court from '../assets/court.png'
+import { GoLaw } from "react-icons/go";
 
 const Feature = () => {
   return (
@@ -24,8 +25,8 @@ const Feature = () => {
           className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
           href="#"
         >
-           <img className='w-14 '   src={scales}    alt="scale" />
-  
+           <img className='w-14 '   src={judge}    alt="scale" />
+           
           <h2 className="mt-4 text-xl font-bold text-white">Legal counseling
 </h2>
   
